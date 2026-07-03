@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import TypingEffect from "../ui/TypingEffect";
 
@@ -39,7 +40,7 @@ export default function HeroSection() {
           </p>
 
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.03, x: 5 }}
             whileTap={{ scale: 0.95 }}
           >
             <Link 
@@ -63,13 +64,14 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-90 group-hover:bg-primary/30 transition-all duration-500" />
             
             {/* Conteneur de l'image (Spider-Man placeholder) */}
-            <div className="relative h-full w-full bg-[#130d2d] rounded-2xl border border-white/5 shadow-2xl overflow-hidden flex flex-col items-center justify-center gap-4 text-white/20">
-              <div className="w-20 h-20 rounded-full border-2 border-dashed border-white/10 flex items-center justify-center">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-                </svg>
-              </div>
-              <p className="font-mono text-sm tracking-wider uppercase">Zone Photo</p>
+            <div className="relative h-full w-full bg-[#130d2d] rounded-2xl border border-white/5 shadow-2xl overflow-hidden">
+              <Image
+                src="/images/hero-photo.png"
+                alt="Photo de Diary Valisoa"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </motion.div>
