@@ -56,7 +56,7 @@ export default function ContactSection() {
           <div>
             <h2 className="text-4xl font-bold mb-6 italic">Parlons <span className="text-primary">Code</span></h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Un projet en tête ou simplement envie de discuter technique ? N'hésite pas à me laisser un message !
+              Un projet en tête ou simplement envie de discuter technique ? N'hésitez pas à me laisser un message !
             </p>
 
             <div className="space-y-6">

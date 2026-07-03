@@ -107,7 +107,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 ) : (
                   <div className="flex flex-col items-center justify-center py-20 text-gray-500">
                     <p className="mb-2">Les images de ce projet ne sont pas encore disponibles.</p>
-                    <p className="text-sm">Ajoutez-les dans le dossier public/images/projects/{project.id}/</p>
+                    {/* <p className="text-sm">Ajoutez-les dans le dossier public/images/projects/{project.id}/</p> */}
                   </div>
                 )}
                 

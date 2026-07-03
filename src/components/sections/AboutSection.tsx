@@ -4,6 +4,7 @@ import SectionWrapper from "../layout/SectionWrapper";
 import { motion } from "framer-motion";
 import TechBadge from "../ui/TechBadge";
 import { SiNextdotjs, SiReact, SiTypescript, SiPrisma, SiShadcnui, SiTailwindcss, SiNodedotjs, SiExpress, SiPostgresql, SiFramer } from "react-icons/si";
+import { GiBearFace } from "react-icons/gi";
 
 export default function AboutSection() {
   const mainTech = [
@@ -16,7 +17,8 @@ export default function AboutSection() {
     { name: "Node.js", icon: SiNodedotjs, color: "#02c39a" },
     { name: "Express", icon: SiExpress, color: "#FFFFFF" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#00a8e8" },
-    { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" }
+    { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" },
+    { name: "Zustand", icon: GiBearFace, color: "#ff7755" }
   ];
 
   return (
@@ -31,7 +33,7 @@ export default function AboutSection() {
           <div className="relative group">
             <div className="absolute -inset-3 bg-linear-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-800"></div>
             <div className="relative glass-card rounded-3xl p-8 md:p-12 overflow-hidden bg-base-300/40 backdrop-blur-md">
-              <div className="absolute top-0 right-0 p-4 font-mono text-[80px] opacity-5 select-none">L3</div>
+              <div className="absolute top-0 right-0 p-5 font-mono text-[80px] opacity-5 select-none">L3</div>
               <h2 className="text-4xl font-bold mb-6">Mon <span className="text-primary">Univers</span></h2>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Actuellement en <span className="text-accent font-semibold">L3 Informatique</span> (Parcours GBD) à l'ENI Fianarantsoa, je me passionne pour la création d'interfaces web qui sortent de l'ordinaire.

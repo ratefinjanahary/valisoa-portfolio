@@ -13,7 +13,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Valisoa | Creative Developer Portfolio",
+  title: "Diary Valisoa",
   description: "Portfolio expérimental d'un étudiant en L3 Informatique à l'ENI Fianarantsoa.",
 };
 
