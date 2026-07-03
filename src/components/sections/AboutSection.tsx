@@ -4,7 +4,7 @@ import SectionWrapper from "../layout/SectionWrapper";
 import { motion } from "framer-motion";
 import TechBadge from "../ui/TechBadge";
 import { SiNextdotjs, SiReact, SiTypescript, SiPrisma, SiShadcnui, SiTailwindcss, SiNodedotjs, SiExpress, SiPostgresql, SiFramer } from "react-icons/si";
-import { GiBearFace } from "react-icons/gi";
+import { RiBearSmileFill  } from "react-icons/ri";
 
 export default function AboutSection() {
   const mainTech = [
@@ -18,7 +18,7 @@ export default function AboutSection() {
     { name: "Express", icon: SiExpress, color: "#FFFFFF" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#00a8e8" },
     { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" },
-    { name: "Zustand", icon: GiBearFace, color: "#ff7755" }
+    { name: "Zustand", icon: RiBearSmileFill, color: "#d4a373" }
   ];
 
   return (
