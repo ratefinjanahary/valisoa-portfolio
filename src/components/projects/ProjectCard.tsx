@@ -20,7 +20,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       >
         <div className="absolute -inset-1 bg-linear-to-r from-primary to-accent rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
         
-        <div className="relative glass-card corner-squircle rounded-3xl overflow-hidden h-full flex flex-col border border-white/5 hover:border-primary/30 transition-all duration-500">
+        <div className="relative glass-card rounded-2xl overflow-hidden h-full flex flex-col border border-white/5 hover:border-primary/30 transition-all duration-500">
           {/* Placeholder pour l'image (en attendant tes vraies images) */}
           <div className="h-48 bg-base-300 relative overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-t from-base-100 to-transparent opacity-60"></div>
@@ -43,12 +43,12 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             
             <div className="flex items-center gap-4 mt-auto">
               {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl corner-squircle bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-md bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
                   <FaGithub size={18} />
                 </a>
               )}
               {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl corner-squircle bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 rounded-md bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
                   <LuExternalLink size={18} />
                 </a>
               )}
@@ -78,7 +78,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative w-full max-w-5xl max-h-[90vh] bg-base-100 rounded-3xl corner-squircle border border-white/10 overflow-hidden flex flex-col shadow-2xl"
+              className="relative w-full max-w-5xl max-h-[90vh] bg-base-100 rounded-3xl border border-white/10 overflow-hidden flex flex-col shadow-2xl"
             >
               <div className="flex justify-between items-center p-6 border-b border-white/5">
                 <h2 className="text-2xl font-bold">{project.title} - Galerie</h2>
@@ -94,7 +94,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 {project.gallery && project.gallery.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {project.gallery.map((imgSrc, i) => (
-                      <div key={i} className="rounded-2xl corner-squircle overflow-hidden bg-base-300 aspect-video relative group">
+                      <div key={i} className="rounded-2xl overflow-hidden bg-base-300 aspect-video relative group">
                         {/* Remplacez par le tag Image de next/image si vous voulez optimiser */}
                         <img 
                           src={imgSrc} 
@@ -111,7 +111,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   </div>
                 )}
                 
-                <div className="mt-8 p-6 rounded-2xl corner-squircle bg-base-300/15 border border-white/5">
+                <div className="mt-8 p-6 rounded-2xl bg-base-300/15 border border-white/5">
                   <h3 className="text-lg font-semibold mb-2">À propos du projet</h3>
                   <p className="text-gray-300 leading-relaxed">{project.longDescription}</p>
                 </div>

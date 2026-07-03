@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "@toolwind/corner-shape";
+
+
 
 @theme {
   --font-sans: "Outfit", sans-serif;

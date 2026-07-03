@@ -44,7 +44,7 @@ export default function HeroSection() {
           >
             <Link 
               href="#projects" 
-              className="bg-[#ec4899] text-[#1a103d] font-bold px-14 py-4 rounded-xl corner-squircle text-lg w-fit shadow-lg shadow-pink-500/20 hover:bg-[#f472b6] transition-all"
+              className="bg-[#ec4899] text-[#1a103d] font-bold px-14 py-4 rounded-lg text-lg w-fit shadow-lg shadow-pink-500/20 hover:bg-[#f472b6] transition-all"
             >
               Voir mes projets
             </Link>

@@ -96,7 +96,7 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed bottom-0 left-0 right-0 z-70 bg-[#1a103d]/95 backdrop-blur-2xl border-t border-primary/30 corner-squircle p-8 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] md:hidden"
+              className="fixed bottom-0 left-0 right-0 z-70 bg-[#1a103d]/95 backdrop-blur-2xl border-t border-primary/30 p-8 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] md:hidden"
             >
               {/* Handle */}
               <div className="w-12 h-1.5 bg-primary/30 rounded-full mx-auto mb-10" />

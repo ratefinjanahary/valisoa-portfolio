@@ -34,9 +34,9 @@ export default function SkillsSection() {
             whileHover={{ y: -6, scale: 1.01 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="p-8 rounded-3xl corner-squircle bg-base-300/30 backdrop-blur-md border border-white/5 hover:border-primary/40 hover:bg-base-300/50 transition-all duration-200 cursor-default"
+            className="p-8 rounded-xl bg-base-300/30 backdrop-blur-md border border-white/5 hover:border-primary/40 hover:bg-base-300/50 transition-all duration-200 cursor-default"
           >
-            <div className="w-12 h-12 rounded-2xl corner-squircle bg-base-300 flex items-center justify-center mb-6 shadow-inner">
+            <div className="w-12 h-12 rounded-lg bg-base-300 flex items-center justify-center mb-6 shadow-inner">
               {cat.icon}
             </div>
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">

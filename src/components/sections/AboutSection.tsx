@@ -30,7 +30,7 @@ export default function AboutSection() {
         >
           <div className="relative group">
             <div className="absolute -inset-3 bg-linear-to-r from-primary to-accent rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-800"></div>
-            <div className="relative glass-card corner-squircle rounded-3xl p-8 md:p-12 overflow-hidden bg-base-300/40 backdrop-blur-md">
+            <div className="relative glass-card rounded-3xl p-8 md:p-12 overflow-hidden bg-base-300/40 backdrop-blur-md">
               <div className="absolute top-0 right-0 p-4 font-mono text-[80px] opacity-5 select-none">L3</div>
               <h2 className="text-4xl font-bold mb-6">Mon <span className="text-primary">Univers</span></h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -59,7 +59,7 @@ export default function AboutSection() {
             ))}
           </div>
           
-          <div className="mt-12 p-6 rounded-2xl corner-squircle bg-base-200/50 border border-white/5">
+          <div className="mt-12 p-6 rounded-2xl bg-base-200/50 border border-white/5">
             "Le code est ma toile, React mon pinceau. J'aime transformer des logiques complexes en interfaces élégantes."
           </div>
         </motion.div>

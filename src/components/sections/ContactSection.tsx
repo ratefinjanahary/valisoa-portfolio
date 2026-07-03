@@ -48,7 +48,7 @@ export default function ContactSection() {
 
   return (
     <SectionWrapper id="contact">
-      <div className="max-w-4xl mx-auto glass-card corner-squircle rounded-3xl p-10 md:p-16 relative overflow-hidden bg-base-300/40 backdrop-blur-md">
+      <div className="max-w-4xl mx-auto glass-card rounded-3xl p-10 md:p-16 relative overflow-hidden bg-base-300/40 backdrop-blur-md">
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/10 blur-[100px] rounded-full"></div>
 
@@ -83,16 +83,16 @@ export default function ContactSection() {
             <input type="hidden" name="_template" value="table" />
             
             <div className="form-control">
-              <input type="text" name="name" required placeholder="Nom" className="input input-bordered bg-base-300/50 focus:input-primary transition-all rounded-xl corner-squircle h-11" disabled={isSubmitting} />
+              <input type="text" name="name" required placeholder="Nom" className="input input-bordered bg-base-300/50 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
             </div>
             <div className="form-control">
-              <input type="email" name="email" required placeholder="Email" className="input input-bordered bg-base-300/50 focus:input-primary transition-all rounded-xl corner-squircle h-11" disabled={isSubmitting} />
+              <input type="email" name="email" required placeholder="Email" className="input input-bordered bg-base-300/50 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
             </div>
             <div className="form-control">
-              <textarea name="message" required placeholder="Message" className="textarea textarea-bordered bg-base-300/50 focus:input-primary transition-all rounded-xl h-32 corner-squircle" disabled={isSubmitting}></textarea>
+              <textarea name="message" required placeholder="Message" className="textarea textarea-bordered bg-base-300/50 focus:input-primary transition-all rounded-md h-32" disabled={isSubmitting}></textarea>
             </div>
             
-            <button type="submit" className="btn btn-primary w-full h-11 rounded-xl corner-squircle group" disabled={isSubmitting}>
+            <button type="submit" className="btn btn-primary w-full h-11 rounded-lg group" disabled={isSubmitting}>
               {isSubmitting ? (
                 <>
                   <span className="loading loading-spinner loading-sm"></span>
@@ -110,7 +110,7 @@ export default function ContactSection() {
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="alert alert-success rounded-xl corner-squircle p-3 text-sm flex items-center"
+                className="alert alert-success rounded-xl p-3 text-sm flex items-center"
               >
                 <LuCircleCheck size={18} />
                 <span>Message envoyé avec succès !</span>
@@ -121,7 +121,7 @@ export default function ContactSection() {
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="alert alert-error rounded-xl corner-squircle p-3 text-sm flex items-center"
+                className="alert alert-error rounded-xl p-3 text-sm flex items-center"
               >
                 <LuCircleAlert size={18} />
                 <span>Une erreur est survenue lors de l'envoi.</span>
