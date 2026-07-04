@@ -21,7 +21,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         <div className="absolute -inset-1 bg-linear-to-r from-primary to-accent rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
         
         <div className="relative glass-card rounded-2xl overflow-hidden h-full flex flex-col border border-white/5 hover:border-primary/30 transition-all duration-500">
-          {/* Placeholder pour l'image (en attendant tes vraies images) */}
+          {/* Placeholder pour l'image */}
           <div className="h-48 bg-base-300 relative overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-t from-base-100 to-transparent opacity-60"></div>
             <div className="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl select-none group-hover:scale-110 transition-transform duration-700 uppercase tracking-tighter">
@@ -95,7 +95,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {project.gallery.map((imgSrc, i) => (
                       <div key={i} className="rounded-2xl overflow-hidden bg-base-300 aspect-video relative group">
-                        {/* Remplacez par le tag Image de next/image si vous voulez optimiser */}
+                        {/* A remplacer par le tag Image de next/image si optimisation nécessaire */}
                         <img 
                           src={imgSrc} 
                           alt={`${project.title} screenshot ${i + 1}`}
