@@ -110,7 +110,7 @@ export default function ContactSection() {
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="alert alert-success rounded-xl p-3 text-sm flex items-center"
+                className="alert alert-success rounded-lg p-3 text-sm flex items-center"
               >
                 <LuCircleCheck size={18} />
                 <span>Message envoyé avec succès !</span>
@@ -121,7 +121,7 @@ export default function ContactSection() {
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="alert alert-error rounded-xl p-3 text-sm flex items-center"
+                className="alert alert-error rounded-lg p-3 text-sm flex items-center"
               >
                 <LuCircleAlert size={18} />
                 <span>Une erreur est survenue lors de l'envoi.</span>
