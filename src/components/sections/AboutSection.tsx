@@ -12,13 +12,13 @@ export default function AboutSection() {
     { name: "React", icon: SiReact, color: "#61DAFB" },
     { name: "TypeScript", icon: SiTypescript, color: "#0096c7" },
     { name: "Prisma", icon: SiPrisma, color: "#FFFFFF" },
+    { name: "Zustand", icon: RiBearSmileFill, color: "#FFFFFF" },
     { name: "Shadcn/ui", icon: SiShadcnui, color: "#00171f" },
     { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "Node.js", icon: SiNodedotjs, color: "#02c39a" },
     { name: "Express", icon: SiExpress, color: "#FFFFFF" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#00a8e8" },
-    { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" },
-    { name: "Zustand", icon: RiBearSmileFill, color: "#d4a373" }
+    { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" }
   ];
 
   return (

@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden bg-[#0a051d]"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 lg:pt-20 lg:pb-0 px-6 overflow-hidden bg-[#0a051d]"
     >
 
       <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -18,7 +18,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col gap-8"
+          className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 order-2 lg:order-1"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#b8a7ff] tracking-tight leading-tight uppercase lg:whitespace-nowrap">
             Développeur créatif
@@ -33,7 +33,7 @@ export default function HeroSection() {
             />
           </div>
 
-          <p className="text-lg text-[#8e89b2] max-w-xl leading-relaxed">
+          <p className="text-lg text-[#8e89b2] max-w-xl leading-relaxed text-justify">
             Je suis un étudiant passionné en L3 Informatique à l'ENI Fianarantsoa. 
             Je me spécialise dans la création d'interfaces modernes et performantes, 
             en transformant des concepts complexes en expériences numériques élégantes.
@@ -57,9 +57,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative group"
+          className="relative group order-1 lg:order-2"
         >
-          <div className="relative w-full aspect-4/5 max-w-[380px] lg:ml-auto">
+          <div className="relative w-full aspect-4/5 max-w-[380px] mx-auto lg:mx-0 lg:ml-auto">
             {/* Effet de lueur derrière l'image */}
             <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-90 group-hover:bg-primary/30 transition-all duration-500" />
             
