@@ -59,7 +59,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative group order-1 lg:order-2"
         >
-          <div className="relative w-full aspect-4/5 max-w-[380px] mx-auto lg:mx-0 lg:ml-auto">
+          <div className="relative w-full aspect-4/5 max-w-[300px] mx-auto lg:mx-0 lg:ml-auto">
             {/* Effet de lueur derrière l'image */}
             <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-90 group-hover:bg-primary/30 transition-all duration-500" />
             
