@@ -33,7 +33,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold mb-6 tracking-tight"
         >
-          Compétences & <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Technologies</span>
+          Compétences et <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Technologies</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

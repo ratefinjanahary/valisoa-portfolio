@@ -83,16 +83,16 @@ export default function ContactSection() {
             <input type="hidden" name="_template" value="table" />
             
             <div className="form-control">
-              <input type="text" name="name" required placeholder="Nom" className="input input-bordered bg-base-300/40 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
+              <input type="text" name="name" required placeholder="Nom" className="input input-bordered w-full bg-base-300/40 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
             </div>
             <div className="form-control">
-              <input type="email" name="email" required placeholder="Email" className="input input-bordered bg-base-300/40 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
+              <input type="email" name="email" required placeholder="Email" className="input input-bordered w-full bg-base-300/40 focus:input-primary transition-all rounded-md h-11" disabled={isSubmitting} />
             </div>
             <div className="form-control">
-              <textarea name="message" required placeholder="Message" className="textarea textarea-bordered bg-base-300/40 focus:input-primary transition-all rounded-md h-32" disabled={isSubmitting}></textarea>
+              <textarea name="message" required placeholder="Message" className="textarea textarea-bordered w-full bg-base-300/40 focus:input-primary transition-all rounded-md h-32" disabled={isSubmitting}></textarea>
             </div>
             
-            <button type="submit" className="btn btn-primary w-full h-11 rounded-lg group" disabled={isSubmitting}>
+            <button type="submit" className="btn btn-primary w-full h-11 rounded-lg" disabled={isSubmitting}>
               {isSubmitting ? (
                 <>
                   <span className="loading loading-spinner loading-sm"></span>
