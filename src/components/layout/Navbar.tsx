@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
+import { MdOutlineFileDownload } from "react-icons/md";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -40,7 +41,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
@@ -50,24 +51,41 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <a 
+              href="/diary-valisoa-cv.pdf" 
+              download="diary-valisoa-cv.pdf" 
+              className="btn btn-primary btn-soft gap-2 ml-4"
+            >
+              <MdOutlineFileDownload size={20} />Mon CV
+            </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden btn btn-ghost btn-circle text-primary"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+          {/* Mobile Right Section */}
+          <div className="flex md:hidden items-center gap-2">
+            <a 
+              href="/diary-valisoa-cv.pdf" 
+              download="diary-valisoa-cv.pdf" 
+              className="btn btn-primary btn-circle shadow-md"
+              aria-label="Télécharger CV"
+            >
+              <MdOutlineFileDownload size={20} />
+            </a>
+            <button 
+              className="btn btn-ghost btn-circle text-primary"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Barre de progression de scroll */}
