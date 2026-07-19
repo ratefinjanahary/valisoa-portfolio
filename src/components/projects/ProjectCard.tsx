@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LuExternalLink, LuX } from "react-icons/lu";
+import { LuExternalLink, LuX, LuImageOff } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa6";
 import { Project } from "@/data/projects";
 
@@ -21,12 +21,22 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         <div className="absolute -inset-1 bg-linear-to-r from-primary to-accent rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
         
         <div className="relative glass-card rounded-2xl overflow-hidden h-full flex flex-col border border-white/5 hover:border-primary/30 transition-all duration-500">
-          {/* Placeholder pour l'image */}
+          {/* Image de couverture */}
           <div className="h-48 bg-base-300 relative overflow-hidden">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+            ) : (
+              <div className="w-full h-full bg-linear-to-br from-base-300/50 to-base-300 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-700 relative">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+                <LuImageOff className="w-8 h-8 mb-3 text-gray-500/50 group-hover:text-primary/50 transition-colors duration-500" />
+                <span className="text-[10px] font-medium tracking-widest uppercase text-gray-500/50 group-hover:text-gray-400/80 transition-colors duration-500">Aperçu indisponible</span>
+              </div>
+            )}
             <div className="absolute inset-0 bg-linear-to-t from-base-100 to-transparent opacity-60"></div>
-            <div className="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl select-none group-hover:scale-110 transition-transform duration-700">
-              {project.title}
-            </div>
           </div>
 
           <div className="p-6 grow flex flex-col">
