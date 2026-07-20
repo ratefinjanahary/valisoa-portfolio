@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuExternalLink, LuX, LuImageOff } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa6";
+import Image from "next/image";
 import { Project } from "@/data/projects";
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -24,10 +25,14 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           {/* Image de couverture */}
           <div className="h-48 bg-base-300 relative overflow-hidden">
             {project.image ? (
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={index < 3} // Charge prioritairement les 3 premiers projets
+                quality={85}
               />
             ) : (
               <div className="w-full h-full bg-linear-to-br from-base-300/50 to-base-300 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-700 relative">
@@ -53,12 +58,12 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             
             <div className="flex items-center gap-4 mt-auto">
               {project.github && (
-                <a href={project.github} target="_blank" className="p-3 rounded-md bg-base-300/10 hover:bg-primary/20 hover:text-primary transition-all">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-md bg-base-300/10 hover:bg-primary/20 hover:text-primary transition-all">
                   <FaGithub size={18} />
                 </a>
               )}
               {project.link && (
-                <a href={project.link} target="_blank" className="p-3 rounded-md bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 rounded-md bg-base-300 hover:bg-primary/20 hover:text-primary transition-all">
                   <LuExternalLink size={18} />
                 </a>
               )}
@@ -105,11 +110,14 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {project.gallery.map((imgSrc, i) => (
                       <div key={i} className="rounded-2xl overflow-hidden bg-base-300 aspect-video relative group">
-                        {/* A remplacer par le tag Image de next/image si optimisation nécessaire */}
-                        <img 
-                          src={imgSrc} 
+                        <Image
+                          src={imgSrc}
                           alt={`${project.title} screenshot ${i + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-103"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          quality={80}
+                          loading={i < 2 ? "eager" : "lazy"} // Charge rapidement les 2 premières images
                         />
                       </div>
                     ))}
@@ -117,7 +125,6 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 ) : (
                   <div className="flex flex-col items-center justify-center py-20 text-gray-500">
                     <p className="mb-2">Les images de ce projet ne sont pas encore disponibles.</p>
-                    {/* <p className="text-sm">Ajoutez-les dans le dossier public/images/projects/{project.id}/</p> */}
                   </div>
                 )}
                 
