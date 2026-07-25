@@ -25,7 +25,7 @@ export const projects: Project[] = [
       "/images/projects/instaplate/basket.png",
       "/images/projects/instaplate/payment.png"
     ],
-    tech: ["React", "TS", "Shadcn", "TailwindCSS", "Zustand", "Node.js", "Express", "SQL", "PostgreSQL"],
+    tech: ["React", "TS", "Daisyui", "TailwindCSS", "Zustand", "Node.js", "Express", "SQL", "PostgreSQL"],
     github: "https://github.com/ratefinjanahary/resto-mgm-api.git",
   },
   {
