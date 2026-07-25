@@ -15,10 +15,10 @@ export default function AboutSection() {
     { name: "Zustand", icon: RiBearSmileFill, color: "#FFFFFF" },
     { name: "Shadcn/ui", icon: SiShadcnui, color: "#00171f" },
     { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Framer Motion", icon: SiFramer, color: "#FFFF" },
     { name: "Node.js", icon: SiNodedotjs, color: "#02c39a" },
     { name: "Express", icon: SiExpress, color: "#FFFFFF" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "#00a8e8" },
-    { name: "Framer Motion", icon: SiFramer, color: "#ff66b3" }
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#00a8e8" }
   ];
 
   return (

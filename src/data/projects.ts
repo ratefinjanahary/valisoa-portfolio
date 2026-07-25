@@ -51,12 +51,12 @@ export const projects: Project[] = [
     longDescription: "Gestion simplifiée des emprunts, retours et inventaire de livres. Inclut un moteur de recherche performant et une gestion fine des utilisateurs et des stocks.",
     image: "/images/bibli-cover.png",
     gallery: [
+      "/images/projects/bibli/hero-section.png",
+      "/images/projects/bibli/borrowing-area-chart.png",
+      "/images/projects/bibli/borrowing-bar-chart.png",
       "/images/projects/bibli/login-page.png",
-      "/images/projects/bibli/dashboard.png",
-      "/images/projects/bibli/borrowings.png",
       "/images/projects/bibli/books.png",
-      "/images/projects/bibli/categories.png",
-      "/images/projects/bibli/catalog.png",
+      "/images/projects/bibli/borrowings.png",
     ],
     tech: ["Next.js","React TS", "Shadcn", "TailwindCSS", "Node.js", "NestJS", "Prisma", "PostgreSQL"],
     github: "https://github.com/ratefinjanahary/library-app-api.git"
