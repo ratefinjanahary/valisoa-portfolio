@@ -15,9 +15,9 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Texte à gauche */}
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 order-2 lg:order-1"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#b8a7ff] tracking-tight leading-tight uppercase lg:whitespace-nowrap">
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </p>
 
           <motion.div
-            whileHover={{ scale: 1.03, x: 5 }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
           >
             <Link 
@@ -54,9 +54,9 @@ export default function HeroSection() {
 
         {/* Placeholder Image à droite */}
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 15 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className="relative group order-1 lg:order-2"
         >
           <div className="relative w-full aspect-4/5 max-w-75 mx-auto lg:mx-0 lg:ml-auto">

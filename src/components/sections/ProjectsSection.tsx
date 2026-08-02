@@ -10,9 +10,10 @@ export default function ProjectsSection() {
     <SectionWrapper id="projects" className="bg-base-100/30">
       <div className="mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
           className="flex flex-col items-center text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 italic">

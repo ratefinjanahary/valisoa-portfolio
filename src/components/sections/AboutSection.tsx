@@ -25,10 +25,10 @@ export default function AboutSection() {
     <SectionWrapper id="about">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
         >
           <div className="relative group">
             <div className="absolute -inset-3 bg-linear-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-800"></div>
@@ -46,10 +46,10 @@ export default function AboutSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 15 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
         >
           <h3 className="text-xl font-bold text-accent mb-8 uppercase tracking-widest flex items-center gap-4">
             <span className="h-px w-12 bg-accent"></span>

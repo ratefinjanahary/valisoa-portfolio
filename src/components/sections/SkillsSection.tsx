@@ -27,19 +27,19 @@ export default function SkillsSection() {
     <SectionWrapper id="skills">
       <div className="text-center mb-16 max-w-2xl mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="text-3xl md:text-4xl font-bold mb-6 tracking-tight"
         >
           Compétences et <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Technologies</span>
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
           className="text-gray-400 text-lg"
         >
           Voici les principales technologies que j'utilise pour concevoir des applications web modernes, performantes et scalables.
@@ -50,11 +50,11 @@ export default function SkillsSection() {
         {skillCategories.map((cat, idx) => (
           <motion.div
             key={cat.title}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ y: -6, scale: 1.01 }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.01 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            transition={{ duration: 0.3, delay: idx * 0.1 }}
             className="p-8 rounded-xl bg-base-300/20 backdrop-blur-md border border-white/10 hover:border-primary/40 hover:bg-base-300/50 transition-all duration-200 cursor-default"
           >
             <div className="w-12 h-12 rounded-lg bg-base-300 flex items-center justify-center mb-6 shadow-inner">
