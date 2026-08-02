@@ -110,10 +110,10 @@ export default function Navbar() {
             
             {/* Sheet Panel */}
             <motion.div
-              initial={{ y: "100%" }}
+              initial={{ y: 15 }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200, duration: 0.3 }}
               className="fixed bottom-0 left-0 right-0 z-70 bg-[#1a103d]/95 backdrop-blur-2xl border-t border-primary/30 p-8 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] md:hidden"
             >
               {/* Handle */}
@@ -123,7 +123,7 @@ export default function Navbar() {
                 {navLinks.map((link, index) => (
                   <motion.li 
                     key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 7 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="w-full text-center"
